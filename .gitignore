@@ -1,0 +1,74 @@
+# General
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# macOS
+.DS_Store
+
+# Logs
+logs
+*.log
+
+# Environment variables
+.env
+
+# Compiled output
+dist/
+build/
+
+# Dependency directories
+bower_components/
+jspm_packages/
+vendor/
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+.dockerenv
+
+# IDE-specific
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Editors
+*.swp
+*~
+
+# PostgreSQL
+*.psql_history
+
+# Node.js
+npm-debug.log*
+
+# Yarn
+yarn-error.log*
+
+# API keys and secrets
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+
+# Output of npm/eject
+/config-overrides.js
+
+# Temporary files
+*.bak
+*.tmp
+
+# Jest Coverage
+/coverage
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+
+# Next.js
+out/
+.next/
