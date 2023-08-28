@@ -17,11 +17,11 @@ WORKDIR /etc/nginx
 RUN chown -R nginxuser:nginxuser /etc/nginx
 
 # Expose ports 80 and 443
-EXPOSE 8080
+EXPOSE 80
 EXPOSE 443
 
 # Switch to the non-root user
-USER nginxuser
+#USER nginxuser
 
 # Start NGINX in the foreground
 CMD ["nginx", "-g", "daemon off;"]
