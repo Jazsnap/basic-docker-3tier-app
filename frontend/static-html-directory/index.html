@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Basic HTML Page</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>This is a basic HTML file.</p>
+    
+    <!-- Add the About link -->
+    <a href="#" id="about-link">About</a>
+
+    <!-- Add a div to display the response from the API -->
+    <div id="api-response"></div>
+    <script>
+        // Add event listener to the About link
+        const aboutLink = document.getElementById('about-link');
+        aboutLink.addEventListener('click', async () => {
+            try {
+                // Make an API request to the backend running on port 3000
+                const response = await fetch('http://localhost:3000/about');
+                const data = await response.text();
+                
+                // Display the response in the API response div
+                const apiResponseDiv = document.getElementById('api-response');
+                apiResponseDiv.innerHTML = data;
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+</html>
