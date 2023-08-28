@@ -2,10 +2,10 @@
 FROM nginx:alpine
 
 # Create a non-root user named "nginxuser"
-RUN adduser -D nginxuser
+# RUN adduser -D nginxuser
 
 # Change ownership of /var/cache/nginx to the non-root user
-RUN chown -R nginxuser /var/cache/nginx
+# RUN chown -R nginxuser /var/cache/nginx
 
 # Copy the static HTML file to the NGINX html directory
 COPY static-html-directory /usr/share/nginx/html
@@ -14,7 +14,7 @@ COPY static-html-directory /usr/share/nginx/html
 WORKDIR /etc/nginx
 
 # Change ownership of copied files to the non-root user
-RUN chown -R nginxuser:nginxuser /etc/nginx
+# RUN chown -R nginxuser:nginxuser /etc/nginx
 
 # Expose ports 80 and 443
 EXPOSE 80
